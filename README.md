@@ -29,13 +29,32 @@
 ## 開発状況
 
 - [x] Phase 0：リポジトリ準備
-- [ ] Phase 1：データベース設計（テーブル・集計ビュー）
+- [x] Phase 1：データベース設計（テーブル・集計ビュー・RLS）
 - [ ] Phase 2：求人分析API（Edge Function）
 - [ ] Phase 3：Webアプリの画面
 - [ ] Phase 4：週次集計バッチ（Python / Docker / Cloud Run）
 - [ ] Phase 5：面接コーチ（AWS Lambda / Bedrock）
 - [ ] Phase 6：スマホアプリ（Flutter）
 - [ ] Phase 7：仕上げ
+
+## ローカルで動かす
+
+必要なもの：Node.js、Docker Desktop
+
+```bash
+npm install
+npm run db:start   # Docker上でSupabaseを起動（テーブル作成と試しデータの投入まで自動）
+npm run db:reset   # DBを作り直す
+npm run db:stop    # 停止
+```
+
+DBの中身は Supabase Studio（http://127.0.0.1:54323）で見られます。
+
+## データベースの工夫
+
+- **RLS（行単位のアクセス制限）**：「自分のデータしか見えない・変えられない」をDB側で保証。画面側のコードにバグがあっても他人のデータは返らない
+- **集計はSQLのビューで**：`skill_ranking`（スキルの登場数・必須率）、`skill_gap`（需要が高いのに学習時間が少ないスキル）
+- **スキル名の重複防止**：`TypeScript` と `typescript` を同じものとして扱う
 
 ## 秘密情報の扱い
 
