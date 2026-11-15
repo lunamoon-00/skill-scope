@@ -27,6 +27,8 @@ venv/
 # ===== Supabase（ローカル実行で作られるもの） =====
 supabase/.branches/
 supabase/.temp/
+# Studio の SQL Editor で書いた練習用のSQL（自動保存される）
+supabase/snippets/
 
 # ===== AWS =====
 .aws-sam/
