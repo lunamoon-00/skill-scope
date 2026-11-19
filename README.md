@@ -30,7 +30,7 @@
 
 - [x] Phase 0：リポジトリ準備
 - [x] Phase 1：データベース設計（テーブル・集計ビュー・RLS）
-- [ ] Phase 2：求人分析API（Edge Function）
+- [x] Phase 2：求人分析API（Edge Function ＋ Gemini、Supabaseクラウドに公開）
 - [ ] Phase 3：Webアプリの画面
 - [ ] Phase 4：週次集計バッチ（Python / Docker / Cloud Run）
 - [ ] Phase 5：面接コーチ（AWS Lambda / Bedrock）
