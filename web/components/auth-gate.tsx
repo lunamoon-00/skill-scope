@@ -102,7 +102,14 @@ function LoginForm() {
       password: String(form.get("password")),
     });
     // 成功したら onAuthStateChange が気づいて、自動で画面が切り替わる
-    if (error) setError("メールアドレスかパスワードが違います");
+    // パスワード違い以外のエラー（設定ミス・通信エラーなど）は、原因が分かるように中身も出す
+    if (error) {
+      setError(
+        error.code === "invalid_credentials"
+          ? "メールアドレスかパスワードが違います"
+          : `ログインできませんでした（${error.message}）`,
+      );
+    }
     setPending(false);
   }
 
