@@ -34,7 +34,7 @@
 - [x] Phase 1：データベース設計（テーブル・集計ビュー・RLS）
 - [x] Phase 2：求人分析API（Edge Function ＋ Gemini、Supabaseクラウドに公開）
 - [x] Phase 3：Webアプリの画面（Next.js、Vercelで公開）
-- [ ] Phase 4：週次集計バッチ（Python / Docker / Cloud Run）
+- [x] Phase 4：週次集計バッチ（Python・pandas / Docker / Cloud Run Jobs、毎週月曜9時に Cloud Scheduler で自動実行。キーは Secret Manager で管理）
 - [ ] Phase 5：面接コーチ（AWS Lambda / Bedrock）
 - [ ] Phase 6：スマホアプリ（Flutter）
 - [ ] Phase 7：仕上げ
