@@ -12,7 +12,7 @@
 | **課題** | 転職活動で「何を学べば採用に近づくか」が、求人を読んだときの感覚でしか分からない。学んだことを面接でうまく説明できない |
 | **手段** | 求人票をAIで構造化してDBに貯め、SQLで集計する。学習ログと比べて不足スキルを出し、AIが面接官役で質問・採点する |
 | **理由** | 求人票は文章なので、そのままでは集計できない。AIでスキル単位に分解すれば数字で比べられる。説明の練習は「課題→手段→理由→成果」の型で採点すると、改善点がはっきりする |
-| **成果** | 求人 ◯件を分析し、◯種類のスキルを抽出。「求人の◯%に出るのに未学習」のスキルが分かり、学習の優先順位を数字で決められた |
+| **成果** | 実際の求人5件を分析し、33種類のスキルを抽出。Gemini が求人の60%、Cursor・Claude Code・ChatGPT などAIで開発する道具が40%に登場し、「生成AIを使って開発できること」が求められていると数字で分かった。そこで上位のスキル（Gemini・TypeScript・Next.js・Python・SQL・GitHub・Google Cloud・AWS）を実際に使うシステムとして、このSkillScope自体を作った |
 
 ## できること
 
@@ -85,7 +85,7 @@ flowchart LR
 - [x] Phase 4：週次集計バッチ（Python・pandas / Docker / Cloud Run Jobs、毎週月曜9時に Cloud Scheduler で自動実行。キーは Secret Manager で管理）
 - [x] Phase 5：面接コーチ（AWS Lambda ＋ 関数URL ＋ Amazon Bedrock）※Bedrock は新規アカウントの利用開始待ち
 - [x] Phase 6：スマホアプリ（Flutter、学習ログの記録。Web版と同じSupabase・RLSを利用）
-- [ ] Phase 7：仕上げ（README・構成図・成果の数字）
+- [x] Phase 7：仕上げ（README・構成図・成果の数字）
 
 ## ローカルで動かす
 
