@@ -4,6 +4,8 @@
 
 > 🚧 開発中（2026年11月〜）。進み具合は下の「開発状況」に記録しています。
 
+**デモ：** https://skill-scope-delta.vercel.app/
+
 ## なぜ作るのか
 
 | | |
@@ -31,7 +33,7 @@
 - [x] Phase 0：リポジトリ準備
 - [x] Phase 1：データベース設計（テーブル・集計ビュー・RLS）
 - [x] Phase 2：求人分析API（Edge Function ＋ Gemini、Supabaseクラウドに公開）
-- [ ] Phase 3：Webアプリの画面
+- [x] Phase 3：Webアプリの画面（Next.js、Vercelで公開）
 - [ ] Phase 4：週次集計バッチ（Python / Docker / Cloud Run）
 - [ ] Phase 5：面接コーチ（AWS Lambda / Bedrock）
 - [ ] Phase 6：スマホアプリ（Flutter）
