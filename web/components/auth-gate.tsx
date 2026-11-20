@@ -46,6 +46,7 @@ const NAV = [
   { href: "/", label: "ダッシュボード" },
   { href: "/jobs", label: "求人" },
   { href: "/study", label: "学習ログ" },
+  { href: "/interview", label: "面接練習" },
 ];
 
 function Header({ email }: { email: string }) {

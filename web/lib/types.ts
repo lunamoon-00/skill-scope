@@ -30,6 +30,15 @@ export type JobPosting = {
 
 export type Skill = { id: number; name: string };
 
+export type InterviewSession = {
+  id: number;
+  question: string;
+  answer: string | null;
+  feedback: string | null;
+  score: number | null;
+  created_at: string;
+};
+
 export type StudyLog = {
   id: number;
   minutes: number;
